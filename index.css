@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;800&family=Poppins:wght@800&family=Roboto:ital,wght@0,500;0,900;1,100;1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+  
+
+}
+.img-logo{
+    width: 140px;
+    height: 100px;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #111010;
+}
+
+/* HEADER*/
+
+#header{
+    background-color: #030303;
+
+}
+#container{
+    display: flex;
+    justify-content: space-around;
+    
+}
+#main-meun{
+    display: flex;
+}
+#main-meun li {
+  position: relative;
+}
+
+#main-meun li a::before{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    content: " ";
+    background-color: rgb(238, 84, 28);
+    width: 70%;
+    height: 2px;
+    display: none;
+    animation: before 2s infinite linear;
+  
+}
+@keyframes before{
+    0%{
+        transform: translateX(0px);
+    }
+    40% , 80%{
+        transform: translateX(40px);
+    }
+    100%{
+        transform: translateX(60px);
+    }
+}
+#main-meun li:hover a::before{
+    display: block;
+   
+}
+#main-meun a{
+    display: block;
+    padding: 40px 30px;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+}
+#main-meun li:first-child a{
+   color: #EE3728;
+   font-weight: 500;
+}
+button{
+    width: 140px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to bottom ,rgba(233, 43, 27, 1), rgba(237, 101, 65, 1));
+    position: relative;
+    top: 25px;
+}
+.btn-register{
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn-register:hover{
+    opacity: 0.70;
+}
+
+/* MAIN CONTENT*/
+
+#main-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+ 
+
+}
+
+#main-heading{
+    background: linear-gradient( to bottom,rgba(211, 16, 0, 1), rgba(237, 101, 65, 1));
+    font-weight: 900;
+    font-size: 80px;
+    letter-spacing: 1px;
+   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    position: relative;
+    bottom: 80px;
+    
+}
+#heading-content > #sub-heading{
+    position: relative;
+    bottom: 60px;
+    left: 220px;
+    font-size: 40px;
+    font-weight: 200;
+    color: white;
+}
+
+ #sub-heading::before{  
+    content: "";
+    position: absolute;
+    background-color: #ED6541;
+    height: 100%;
+    width: 3px;
+    left: -7px;  
+}
+
+#desc-mainContent{
+   position: relative;
+   bottom: 40px;
+   color: white;
+   font-weight: 200;
+   font-size: 18px;
+}
+
+#btn-bookTable{
+ background: linear-gradient(to bottom , rgba(246, 75, 30, 1) , rgb(39, 31, 28));
+ color: white;
+ font-weight: 600;
+ font-size: 18px;
+ width: 160px;
+ height: 50px;
+ position: relative;
+ left: 170px;
+ cursor: pointer;
+}
+
+#btn-bookTable:hover{
+    opacity: 0.70;
+}
+
+.img-banner{
+    height: 400px;
+    width: 350px;
+    transform: rotate(40deg);
+    margin-bottom: 70px;
+    box-shadow: 0px 0px 10px 5px rgb(189, 106, 76);
+    border-radius: 5px;
+   
+}
+
+#icon-messenger{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 40px;
+    position: relative;
+    bottom: 170px;
+    right: 30px;
+    color: white;
+    cursor: pointer;
+    
+}
+
+
+/* FOOTER*/
+#wrapper-footer{
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    height: 100px;
+
+}
+#heading-about{
+color: white;
+text-align: center;
+}
+#heading-footer{
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    padding: 8px 0;
+
+}
+#desc-footer{
+    color: rgb(34, 34, 34);
+    padding: 15px 0;
+    text-align: center;
+
+}
+#group-footer span{
+    color: rgb(34, 34, 34);
+    padding: 20px 5px;
+    text-align: center;
+
+}
+#icon-lacation, #icon-address , #icon-contact{
+    color: rgb(34, 32, 32);
+    padding: 20px 5px;
+    text-align: center;
+}
+#icon-ig{
+    color: #EE3728;
+}
+#icon-fb{
+    color: rgb(19, 49, 219);
+}
+#icon-youtube{
+    color: rgb(235, 24, 24);
+}
+#icon-ig , #icon-fb ,#icon-youtube{
+    padding: 30px 9px;
+    font-size: 30px;
+}

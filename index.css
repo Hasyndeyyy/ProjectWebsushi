@@ -4,8 +4,6 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
-  
-
 }
 .img-logo{
     width: 140px;
@@ -57,6 +55,7 @@ body{
         transform: translateX(60px);
     }
 }
+
 #main-meun li:hover a::before{
     display: block;
    
@@ -158,14 +157,14 @@ button{
 
 .img-banner{
     height: 400px;
-    width: 350px;
+    max-width: 350px;
     transform: rotate(40deg);
     margin-bottom: 70px;
     box-shadow: 0px 0px 10px 5px rgb(189, 106, 76);
     border-radius: 5px;
-   
 }
 
+/*
 #icon-messenger{
     display: flex;
     justify-content: flex-end;
@@ -179,53 +178,62 @@ button{
 }
 
 
+*/
+
+
 /* FOOTER*/
-#wrapper-footer{
-    padding: 25px 0;
+#footer{
+
+    padding: 30px 0;
     display: flex;
     justify-content: space-around;
     background-color: black;
-    height: 100px;
+    height: 150px;
+    text-align: center;
 
 }
+
 #heading-about{
-color: white;
-text-align: center;
+color: #f81f0b;
 }
+
 #heading-footer{
-    color: white;
-    font-weight: 500;
-    text-align: center;
-    padding: 8px 0;
 
+    color: #f81f0b;
+    font-weight: 600;
+    padding: 6px 0;
 }
+
 #desc-footer{
-    color: rgb(34, 34, 34);
-    padding: 15px 0;
-    text-align: center;
-
+    color: rgb(56, 55, 55);
+    padding: 15px 0;    
 }
+
 #group-footer span{
-    color: rgb(34, 34, 34);
+    color: rgb(56, 55, 55);
     padding: 20px 5px;
-    text-align: center;
-
 }
+
 #icon-lacation, #icon-address , #icon-contact{
     color: rgb(34, 32, 32);
-    padding: 20px 5px;
-    text-align: center;
+    padding: 20px 0px;
+    
 }
-#icon-ig{
+#icon-intagram{
     color: #EE3728;
 }
-#icon-fb{
+#icon-facebook{
     color: rgb(19, 49, 219);
 }
 #icon-youtube{
     color: rgb(235, 24, 24);
 }
-#icon-ig , #icon-fb ,#icon-youtube{
-    padding: 30px 9px;
+#icon-intagram , #icon-facebook ,#icon-youtube{
+    padding: 30px 8px;
     font-size: 30px;
+    cursor: pointer; 
+}
+
+#icon-intagram:hover , #icon-facebook:hover ,#icon-youtube:hover{
+    opacity: 0.80;
 }

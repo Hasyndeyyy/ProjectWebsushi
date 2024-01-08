@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Register</title>
+</head>
+<!-- CSS -->
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.img-logo{
+    width: 140px;
+    height: 100px;
+}
+body{
+    font-family: 'Inter', sans-serif;
+   background-image: url(images/banner_bookTable.jpg) ;
+   background-size: cover;
+}
+
+/* HEADER*/
+
+#header{
+    background-color: #030303;
+
+}
+#container{
+    display: flex;
+    justify-content: space-around;
+    
+}
+#main-meun{
+    display: flex;
+}
+#main-meun li {
+  position: relative;
+}
+
+#main-meun li a::before{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    content: " ";
+    background-color: rgb(238, 84, 28);
+    width: 70%;
+    height: 2px;
+    display: none;
+    animation: before 2s infinite linear;
+  
+}
+@keyframes before{
+    0%{
+        transform: translateX(0px);
+    }
+    40% , 80%{
+        transform: translateX(40px);
+    }
+    100%{
+        transform: translateX(60px);
+    }
+}
+
+#main-meun li:hover a::before{
+    display: block;
+   
+}
+#main-meun a{
+    display: block;
+    padding: 40px 30px;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+}
+#main-meun li:first-child a{
+   color: #EE3728;
+   font-weight: 500;
+}
+.btn-button1{
+ 
+ width: 140px;
+ height: 50px;
+
+}
+.btn-button1 button{
+ width: 100%;
+ height: 100%;
+ border-radius: 20px;
+ background: linear-gradient(to bottom ,rgba(233, 43, 27, 1), rgba(237, 101, 65, 1));
+ border: none;
+ outline: none;
+ position: relative;
+top: 25px;
+ 
+}
+.btn-register{
+
+ font-weight: 800;
+ font-size: 18px;
+ cursor: pointer;
+}
+.btn-register a{
+    color: white;
+}
+.btn-register:hover{
+ opacity: 0.70;
+}
+
+/* FOOTER*/
+
+#footer{
+
+padding: 30px 0;
+display: flex;
+justify-content: space-around;
+background-color: black;
+height: 150px;
+text-align: center;
+
+}
+
+#heading-about{
+    color: #EE3728;
+}
+
+#heading-footer{
+
+    color: #EE3728;
+    font-weight: 600;
+    padding: 6px 0;
+}
+
+#desc-footer{
+color: rgb(56, 55, 55);
+padding: 15px 0;    
+}
+
+#group-footer span{
+color: rgb(56, 55, 55);
+padding: 20px 5px;
+}
+
+#icon-lacation, #icon-address , #icon-contact{
+color: rgb(34, 32, 32);
+padding: 20px 0px;
+
+}
+#icon-intagram{
+color: #EE3728;
+}
+#icon-facebook{
+color: rgb(19, 49, 219);
+}
+#icon-youtube{
+color: rgb(235, 24, 24);
+}
+#icon-intagram , #icon-facebook ,#icon-youtube{
+padding: 30px 8px;
+font-size: 30px;
+cursor: pointer; 
+}
+
+#icon-intagram:hover , #icon-facebook:hover ,#icon-youtube:hover{
+opacity: 0.80;
+}
+
+/* Form register*/
+
+#wrapper-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+   
+}
+#including-form{
+    background-color: white;
+   width: 400px;
+   border-radius: 20px;
+   padding: 45px 17px;
+}
+.heading-register{
+    text-align: center;
+    color: orangered;
+}
+#input-user , #input-email ,  #input-password , #input-password2{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    margin-top: 40px;
+ 
+
+
+}
+
+   
+.heading-sub{
+    position: relative;
+    top: 30px;
+    color: 201F1E;
+}
+
+#btn-button2{
+    width: 130px;
+    height: 45px;
+   
+}
+
+#btn-button2 button{
+    background-color: orangered;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    position: relative;
+    left: 130px;
+    top: 30px;
+
+}
+#btn-submit{
+   color: white;
+   font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#btn-submit:hover{
+  opacity: 0.80;
+}
+.group-form .error{
+
+    color: rgb(255, 0, 0);
+    font-size: 15px;
+    height: 8px;
+    
+}
+.group-form .success{
+    color: green;
+    font-size: 15px;
+    height: 8px;
+}
+
+
+</style>
+
+<body>
+        <!-- Header -->
+        <header>
+            <div id="header">
+                <nav id="container">
+                <img src="images/LOGO.png" alt="" class="img-logo">
+                <ul id="main-meun">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ORDER</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+                <div class="btn-button1">
+                    <button class="btn-register"><a href="register.html">REGISTER</a></button>
+                </div>
+                </nav>
+            </div>
+        </header>
+
+<!-- Form register-->
+
+           <div id="wrapper-form">
+
+           <div id="including-form">
+
+            <form action="" id="form">         
+                <h1 class="heading-register">REGISTER</h1>  
+
+                <div class="group-form">
+                    <label for="input-user">
+                        <h4 class="heading-sub">User</h4>
+                        <input type="text" id="input-user" name="input-user">
+                        <div class="error"></div>
+                    </label>
+                  
+                </div>
+
+                <div class="group-form">
+                    <label for="input-email">
+                        <h4  class="heading-sub">Email</h4>
+                        <input type="email" id="input-email" name="input-email">
+                        <div class="error"></div>
+                    </label>
+               
+                </div>
+
+                <div class="group-form">
+                    <label for="input-password">
+                        <h4  class="heading-sub">Password</h4>
+                        <input type="text" id="input-password" name="input-password">
+                        <div class="error"></div>
+                    </label>
+      
+                </div>
+
+                <div class="group-form">
+                    <label for="input-password2">
+                        <h4  class="heading-sub">Enter Password Again</h4>
+                        <input type="text" id="input-password2" name="input-password2">
+                        <div class="error"></div>
+                    </label>
+             
+                </div>     
+                  
+                  <div id="btn-button2">
+                    <button id="btn-submit">SUBMIT</button>
+                  </div>                
+          </form>
+           </div>
+
+           </div>
+
+          <!-- FOOTER -->        
+          <footer>
+
+            <div id="footer">
+            
+              <div id="group-footer">
+                  <h2 id="heading-about">ABOUT MODERU</h2>
+                  <p id="desc-footer">
+                      This web is created out of the love I have for sushi.<br>
+                      I hope that Moderu restaurant will bring everyone<br>
+                      a joyful experience.                          
+                  </p>     
+              </div>
+
+              <div id="group-footer">
+                  <h3 id="heading-footer" >ADDRESS</h3>
+                  <i id="icon-lacation" class="fa-solid fa-location-pin"></i><span>Duong song can</span>
+              </div>
+
+              <div id="group-footer">
+                  <h3 id="heading-footer">CONTACT</h3>
+                  <i id="icon-contact" class="fa-solid fa-phone"><span>0522 - 668 - 770</span></i>
+              </div>
+
+              <div id="group-footer">
+                  <i id="icon-intagram" class="fa-brands fa-instagram"></i>
+                  <i id="icon-facebook"  class="fa-brands fa-facebook"></i>
+                  <i id="icon-youtube" class="fa-brands fa-youtube"></i>
+              </div>
+
+            </div>
+        </footer>
+ 
+    <!-- JS -->
+    <script>
+         // Get id
+         let form = document.getElementById('form')
+         let username = document.getElementById('input-user')
+         let email = document.getElementById('input-email')
+         let password = document.getElementById('input-password')
+         let password2 = document.getElementById('input-password2')
+         
+         // Dùng sự kiện default để chặn người dung submit khi chưa nhập dữ liệu
+
+         form.addEventListener('submit', (e)=>{
+            e.preventDefault()
+            validateInputs()
+         })
+         
+         // setError & setSuccess
+        
+        let setError = (element , message) => {
+             let getEparent = element.parentElement
+             let getError = getEparent.querySelector('.error') 
+
+             getError.innerText = message
+             getEparent.classList.add('error')
+             getEparent.classList.remove('success')
+
+         }
+
+        let setSuccess = (element , message) => {
+            let getEparent = element.parentElement
+             let getError = getEparent.querySelector('.error') 
+
+             getError.innerText = ''
+             getEparent.classList.add('success')
+             getEparent.classList.remove('error')
+
+         }
+          
+          
+
+
+
+     
+         // Chính qui
+
+        const isValidEmail = email => {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      }
+
+        // Check value
+
+       var  validateInputs = () => {
+        
+        // get value 
+        let usernameValue = username.value.trim()
+        let emailValue = email.value.trim()
+        let passwordValue = password.value.trim()
+        let passwordValue2 = password2.value.trim()
+      
+        if(usernameValue === ""){
+            setError(username , 'Username is required')
+        }else{
+            setSuccess(username)
+        }
+
+        if(emailValue === ""){
+            setError(email , 'Email is required')
+        }else if (!isValidEmail(emailValue)) {
+        setError(email, 'Provide a valid email address');
+        } else {
+        setSuccess(email);
+        }
+
+        if(passwordValue === ""){
+            setError(password , 'Password is required')
+        }else if(passwordValue.length < 8){
+            setError(password , 'Password must be at least 8 character')
+        }else{
+            setSuccess(password)
+        }
+
+        if(passwordValue2 === ""){
+            setError(password2 , 'Password is required')
+        }else if(passwordValue2 !== passwordValue){
+            setError(password2 , 'Password do not match')
+        }else{
+            setSuccess(passwordValue2)
+        }
+
+
+       }
+     
+    </script>
+
+</body>
+</html>
